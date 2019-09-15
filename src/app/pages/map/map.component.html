@@ -1,2 +1,10 @@
 <mat-toolbar id="MAP">Here is where to be on Nov 21, 2020</mat-toolbar>
 <p>map works!</p>
+
+
+<div id="map">
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+  </div>
+

@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material';
 import { MapComponent } from './pages/map/map.component';
 import { RegistryComponent } from './pages/registry/registry.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,11 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    AgmCoreModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA8MNrt7b79Zhhk6mD9Jejn_9bYJTg6-zY'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
