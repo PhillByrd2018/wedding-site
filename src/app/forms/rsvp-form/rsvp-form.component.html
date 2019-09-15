@@ -1,0 +1,47 @@
+<mat-toolbar id="RSVP">Tell us who is coming!</mat-toolbar>
+<div class="example-container">
+
+        <form class="example-container" [formGroup]="options">
+
+                <mat-checkbox formControlName="attending">Are you coming to the wedding?</mat-checkbox>
+                <div>
+                  <label>Number in you party</label>
+                  <mat-radio-group formControlName="floatLabel">
+                    <mat-radio-button value="Solo">Solo</mat-radio-button>
+                    <mat-radio-button value="Plus One">Plus One</mat-radio-button>
+                    <mat-radio-button value="Requesting More Than One">Requesting More Than One</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+        </form>
+
+                <mat-form-field
+                    [hideRequiredMarker]="!options.value.attending"
+                    [floatLabel]="options.value.floatLabel">
+                    <input matInput placeholder="Full Name" required>
+                </mat-form-field>
+
+                <mat-form-field
+                    [hideRequiredMarker]="!options.value.attending"
+                    [floatLabel]="options.value.floatLabel">
+                    <input matInput placeholder="Email" required>
+                </mat-form-field>
+
+                <mat-form-field [floatLabel]="!options.value.floatLabel">
+                    <!-- <mat-label>Both a label and a placeholder</mat-label> -->
+                    <input matInput placeholder="Message to the Bride and Groom">
+                </mat-form-field>
+
+
+                <mat-form-field
+                        [hideRequiredMarker]="!options.value.attending"
+                        [floatLabel]="options.value.floatLabel">
+                        <mat-label><mat-icon>cake</mat-icon> Which cocktail would you like?</mat-label>
+                    <mat-select required>
+                        <mat-option>-- None --</mat-option>
+                        <mat-option value="Megan">Megan's Cocktail</mat-option>
+                        <mat-option value="Phillip">Phillip's Cocktail</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+</div>    
