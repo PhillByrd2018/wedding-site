@@ -1,0 +1,45 @@
+<mat-toolbar id="RSVP">Tell us who is coming!</mat-toolbar>
+<div class="example-container">
+
+        <form class="example-container" [formGroup]="guest">
+
+                <mat-checkbox formControlName="attending">Are you coming to the wedding?</mat-checkbox>
+
+                <mat-form-field>
+                    <input matInput formControlName="name"  type='text' placeholder="Full Name" required>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput formControlName="email" type='text' placeholder="Email" required>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput formControlName="message" placeholder="Message to the Bride and Groom">
+                </mat-form-field>
+
+
+                <button mat-raised-button color="primary" (click)="onSubmitRSVP()">Send RSVP</button>
+            
+                <mat-form-field>
+                    <mat-label><mat-icon>cake</mat-icon> Which cocktail would you like?</mat-label>
+                        <mat-select formControlName="cocktail" required>
+                            <mat-option>-- None --</mat-option>
+                            <mat-option value="Megan">Megan's Cocktail</mat-option>
+                            <mat-option value="Phillip">Phillip's Cocktail</mat-option>
+                        </mat-select>
+                </mat-form-field> 
+
+
+            </form>
+
+             
+
+               
+
+
+
+               
+
+                
+
+</div>    
