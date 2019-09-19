@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatGridListModule } from '@angular/material'
+import { MatGridListModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,6 +19,7 @@ import { RegistryComponent } from './pages/registry/registry.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AgmCoreModule } from '@agm/core';
 import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MatButtonModule } from '@angular/material/button';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA8MNrt7b79Zhhk6mD9Jejn_9bYJTg6-zY'
     }),
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
