@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Guest } from '../../model/guest.model';
+import { GuestService } from 'src/app/service/guest.service';
 
 @Component({
   selector: 'app-rsvp-form',
@@ -12,15 +13,16 @@ import { Guest } from '../../model/guest.model';
 export class RsvpFormComponent implements OnInit {
   guest: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, public guestService: GuestService) {
     this.guest = fb.group({
       attending: false,
-      name: ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.maxLength(500)],
-      cocktail: [''],
+      name: ['Phill', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
+      email: ['Phill@gmail.com', [Validators.required, Validators.email]],
+      message: ['Congrats', Validators.maxLength(500)],
+      cocktail: ['None'],
     });
     console.log('Form started: ', this.guest);
+    
    }
 
    public hasError = (controlName: string, errorName: string) => {
@@ -51,7 +53,7 @@ export class RsvpFormComponent implements OnInit {
         cocktail: guestFormValue.cocktail
       };
 
-      // call service to API hand off with Guest
+  this.guestService.addGuest(guest);
 
   }
 
