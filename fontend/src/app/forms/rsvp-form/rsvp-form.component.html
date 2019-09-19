@@ -11,7 +11,7 @@
 
                             <mat-form-field>
                                 <input matInput formControlName="name"  type='text' placeholder="Full Name" required>
-                                <mat-error *ngIf="hasError('name', 'required')">You have to give us a name</mat-error>
+                                <mat-error *ngIf="hasError('name', 'required')">Let us know who is coming</mat-error>
                                 <mat-error *ngIf="hasError('name', 'maxlength')">Your name is too long</mat-error>
                                 <mat-error *ngIf="hasError('name', 'minlength')">Your name is too short</mat-error>
                             </mat-form-field>
@@ -29,6 +29,7 @@
                                             <mat-option value="Megan">Megan's Cocktail</mat-option>
                                             <mat-option value="Phillip">Phillip's Cocktail</mat-option>
                                         </mat-select>
+                                    <mat-error *ngIf="hasError('cocktail', 'required')">Let us know what you are having</mat-error>
                             </mat-form-field> 
 
                             <mat-form-field>

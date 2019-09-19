@@ -15,10 +15,10 @@ export class RsvpFormComponent implements OnInit {
   constructor(fb: FormBuilder) {
     this.guest = fb.group({
       attending: false,
-      name: ['Phill', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
-      email: ['Phill@gmail.com', [Validators.required, Validators.email]],
-      message: ['Congrats', Validators.maxLength(500)],
-      cocktail: ['None'],
+      name: ['', [Validators.required, Validators.maxLength(15), Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.maxLength(500)],
+      cocktail: [''],
     });
     console.log('Form started: ', this.guest);
    }
