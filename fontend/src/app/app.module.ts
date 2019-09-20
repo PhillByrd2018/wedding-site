@@ -20,6 +20,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AgmCoreModule } from '@agm/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {MatCardModule} from '@angular/material/card';
       apiKey: 'AIzaSyA8MNrt7b79Zhhk6mD9Jejn_9bYJTg6-zY'
     }),
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
