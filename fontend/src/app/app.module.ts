@@ -25,7 +25,7 @@ import { CountDownComponent } from './pages/count-down/count-down.component';
 import { CountdownModule  } from 'ngx-countdown';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import 'hammerjs';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -59,7 +59,8 @@ import 'hammerjs';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    CountdownModule
+    CountdownModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
