@@ -21,6 +21,11 @@ import { AgmCoreModule } from '@agm/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { CountDownComponent } from './pages/count-down/count-down.component';
+import { CountdownModule  } from 'ngx-countdown';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import 'hammerjs';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     RsvpFormComponent,
     MapComponent,
     RegistryComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CountDownComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,8 @@ import { HttpClientModule } from '@angular/common/http';
     }),
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
