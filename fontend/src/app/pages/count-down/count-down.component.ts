@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild, Input, OnDestroy } from '@angular/core';
-import { CountdownComponent, CountdownConfig } from 'ngx-countdown';
-import { Clock } from 'src/app/model/clock.model';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
