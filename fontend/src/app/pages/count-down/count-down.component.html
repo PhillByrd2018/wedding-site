@@ -1,8 +1,12 @@
 <section fxLayout="row wrap" fxLayoutAlign="center center">
     <mat-card fxFlex="500px" fxFlex.xs="100%">
 
-        <mat-toolbar id="Count-Down">How Many Day Left</mat-toolbar>
+        <mat-toolbar id="Count-Down">How Many Days Left</mat-toolbar>
         <p>Here is the the Clock</p>
-        <countdown #cd [config]="config"></countdown>
+        <!-- <countdown #cd [config]="config"></countdown> -->
+                <p>{{days}} Days</p>
+                <p>{{hours}} Hours</p>
+                <p>{{minutes}} Minutes</p>
+                <p>{{seconds}} Seconds</p>
     </mat-card>
 </section>
