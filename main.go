@@ -7,6 +7,7 @@ import (
 
 func main() {
 	fmt.Printf("Starting wedding-site\n")
+
 	e := route.Init()
-	e.Logger.Fatal(e.Start(*host )
+	e.Logger.Fatal(e.Start(":1323"))
 }

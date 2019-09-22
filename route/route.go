@@ -23,7 +23,7 @@ func Init() *echo.Echo {
 
 	e.Use(middleware.CORS())
 
-	e.POST("api/guestRSVP", api.SubmitRSVP())
+	e.POST("api/guestRSVP", api.SubmitRSVP)
 
 	return e
 

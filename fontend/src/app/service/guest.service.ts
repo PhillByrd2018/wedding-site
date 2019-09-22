@@ -12,7 +12,7 @@ export class GuestService {
 
   addGuest(guest: Guest ) {
     console.log('Made it to service ready to user to GO', guest);
-    console.log(environment.gateway + 'postRSVP', guest);
+    console.log(environment.gateway + 'guestRSVP', guest);
 
     const HttpOptions = {
       headers: new HttpHeaders({
@@ -20,7 +20,9 @@ export class GuestService {
       })
     };
 
-    return this.http.post(environment.gateway + 'postRSVP', guest, HttpOptions);
+    const guestJSON = JSON.stringify(guest);
+
+    return this.http.post(environment.gateway + 'guestRSVP', guestJSON, HttpOptions);
   }
 
   giveYourWifeXMooches(numMooches: number, moochesGiven: number, wifeHasReceivedEnoughMooches: boolean) {

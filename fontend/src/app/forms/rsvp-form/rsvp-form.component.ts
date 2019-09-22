@@ -53,7 +53,10 @@ export class RsvpFormComponent implements OnInit {
         cocktail: guestFormValue.cocktail
       };
 
-  this.guestService.addGuest(guest);
+  this.guestService.addGuest(guest).subscribe(
+    data => { console.log('success! RSVP sent', data); },
+    error => { console.log('RSVP failed', error); }
+  );
 
   }
 

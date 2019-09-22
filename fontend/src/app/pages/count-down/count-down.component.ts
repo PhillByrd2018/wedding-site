@@ -36,15 +36,10 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   private calculateTimeLeft() {
     this.timeUntil = this.dateOfWedding.getTime() - new Date().getTime();
-    console.log('today date: ', this.today);
-    console.log('time until: ', this.timeUntil);
     this.days = Math.floor(this.timeUntil / (1000 * 60 * 60 * 24));
     this.hours = Math.floor((this.timeUntil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     this.minutes = Math.floor((this.timeUntil % (1000 * 60 * 60)) / (1000 * 60));
     this.seconds = Math.floor((this.timeUntil % (1000 * 60)) / 1000);
-
-    console.log(this.days + 'd ' + this.hours + 'h '
-    + this.minutes + 'm ' + this.seconds + 's ');
   }
 
 }
